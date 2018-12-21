@@ -1,0 +1,55 @@
+
+
+<div class="container">
+  <h2>{{title}}</h2>
+
+<div class="message success" *ngIf="status == 'success'">
+  The project was created successfully <a href="#">see it</a>
+</div>
+<div class="message failed" *ngIf="status == 'failed'">
+  The project wasn't created
+</div>
+      <form #projectForm ="ngForm"(ngSubmit)="onSubmit(projectForm)">
+        <p>
+             <label for="name">Name</label>
+             <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required /> <br>
+             <span *ngIf= "name.touched && !name.valid">
+              The name is required
+             </span>
+        </p>
+        <p>
+             <label for="description">Description</label>
+             <textarea name="description" rows="8" cols="80" #description="ngModel" [(ngModel)]="project.description"required ></textarea> <br>
+             <span *ngIf= "description.touched && !description.valid">
+              The description is required
+             </span>
+        </p>
+        <p>
+             <label for="category">Category</label>
+             <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category"required /> <br>
+             <span *ngIf= "category.touched && !category.valid">
+              The category is required
+             </span>
+        </p>
+        <p>
+             <label for="langs">Tecnologies</label>
+             <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs"required /> <br>
+             <span *ngIf= "langs.touched && !langs.valid">
+              The tecnologies is required
+             </span>
+        </p>
+        <p>
+             <label for="year">Year</label>
+             <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required /> <br>
+             <span *ngIf= "name.touched && !year.valid">
+              The year is required
+             </span>
+        </p>
+        <p>
+          <label for="image">picture</label>
+          <input type="file" name="image" placeholder="upload image"/>
+        </p>
+             <input type="submit" value="send" [disabled]= "!projectForm.form.valid" />
+      </form>
+
+</div>

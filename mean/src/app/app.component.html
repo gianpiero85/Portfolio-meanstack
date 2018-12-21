@@ -1,0 +1,18 @@
+
+<header>
+  <<ul>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['actived']">About</a></li>
+    <li><a [routerLink]="['/projects']"[routerLinkActive]="['actived']">Projects</a></li>
+    <li id = 'logo'><a href='#'[routerLink]="['/projects']"><G/M></a></li>
+    <li><a [routerLink]="['/add']"[routerLinkActive]="['actived']">Add Project</a></li>
+    <li><a [routerLink]="['/contact']"[routerLinkActive]="['actived']">Contact</a></li>
+  </ul>
+</header>
+
+<section id='content'>
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Master en Javascript de Gianpiero Maccarrone &copy;
+</footer>

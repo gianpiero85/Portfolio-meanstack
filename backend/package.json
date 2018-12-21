@@ -1,0 +1,21 @@
+{
+  "name": "api-rest-node.js",
+  "version": "1.0.0",
+  "description": "api rest del mean stack project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "nodemon index.js"
+  },
+  "author": "Gianpiero Maccarrone",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
